@@ -3,49 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helen's Fukuoka Drive 2026</title>
+    <title>Helen's Fukuoka Drive</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        :root { --primary-color: #2a5298; --secondary-color: #1e3c72; }
-        body { background-color: #f0f2f5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-        .hero-section { background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 40px 0; border-radius: 0 0 30px 30px; margin-bottom: 30px; }
-        .day-card { border: none; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; transition: transform 0.2s; }
-        .day-header { border-radius: 20px 20px 0 0 !important; font-weight: bold; font-size: 1.2rem; }
-        .stage-1 { background-color: #e3f2fd; color: #0d47a1; } /* Marinoa */
-        .stage-2 { background-color: #fff3e0; color: #e65100; } /* Luigans */
-        .stage-3 { background-color: #e8f5e9; color: #1b5e20; } /* Garden Terrace */
-        .time-slot { border-left: 3px solid #dee2e6; padding-left: 15px; margin-bottom: 15px; position: relative; }
-        .time-label { font-weight: bold; color: #495057; display: block; margin-bottom: 5px; }
-        .map-btn { border-radius: 50px; font-size: 0.8rem; padding: 4px 12px; margin-top: 5px; }
-        .tips-box { background-color: #fffbe6; border: 1px solid #ffe58f; border-radius: 10px; padding: 10px; font-size: 0.9rem; margin-top: 10px; }
-        .done-check { float: right; width: 25px; height: 25px; border-radius: 50%; }
-        .strikethrough { text-decoration: line-through; opacity: 0.6; }
+        body { background-color: #f4f7f9; font-family: sans-serif; padding-bottom: 50px; }
+        .hero { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 30px 0; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 20px; }
+        .day-card { border: none; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; overflow: hidden; }
+        .stage-1 { border-left: 8px solid #0d6efd; } .stage-2 { border-left: 8px solid #fd7e14; } .stage-3 { border-left: 8px solid #198754; }
+        .card-header { font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+        .item { border-bottom: 1px solid #eee; padding: 10px 0; }
+        .item:last-child { border-bottom: none; }
+        .map-btn { font-size: 0.8rem; border-radius: 20px; margin-top: 5px; }
+        .tips { background: #fffbe6; border: 1px solid #ffe58f; padding: 8px; border-radius: 8px; font-size: 0.85rem; margin-top: 5px; }
+        .done { opacity: 0.4; text-decoration: line-through; }
     </style>
 </head>
 <body>
 
-<div class="hero-section text-center">
-    <div class="container">
-        <h1 class="fw-bold">福岡自駕美食之旅 🚗</h1>
-        <p class="mb-0">2026.04.22 - 04.29 | Helen's Personal Guide</p>
-    </div>
+<div class="hero">
+    <h1>福岡自駕全攻略 🚗</h1>
+    <p>4/22 - 4/29 | Helen's Trip</p>
 </div>
 
 <div class="container">
+    <div class="card day-card stage-1">
+        <div class="card-header bg-light">Day 1: 4/22 (三) Marinoa Resort <input type="checkbox" class="form-check-input chk"></div>
+        <div class="card-body">
+            <div class="item"><b>下午：酒店 Check-in</b><br><small>專屬停車場非常方便</small><br><a href="https://www.google.com/maps/search/Hotel+Marinoa+Resort+Fukuoka" target="_blank" class="btn btn-outline-primary btn-sm map-btn">導航</a></div>
+            <div class="item"><b>傍晚：Marinoa City Outlet</b><br><small>步行即達，瘋狂購物</small></div>
+            <div class="item"><b>晚餐：天ぷら なすび</b><br><small>車程 5-8 分鐘，極高評價</small><br><a href="https://www.google.com/maps/search/Tenpura+Nasubi+Fukuoka" target="_blank" class="btn btn-outline-primary btn-sm map-btn">導航</a></div>
+        </div>
+    </div>
 
-    <div class="d-flex align-items-center mb-3">
-        <span class="badge bg-primary me-2">第一階段</span>
-        <h4 class="mb-0 text-primary">西區 Outlet 與糸島邊緣</h4>
+    <div class="card day-card stage-1">
+        <div class="card-header bg-light">Day 2: 4/23 (四) 西區風景 <input type="checkbox" class="form-check-input chk"></div>
+        <div class="card-body">
+            <div class="item"><b>上午：友泉亭公園</b><br><small>車程 20 分鐘，日式庭園</small><br><a href="https://www.google.com/maps/search/Yusentei+Park" target="_blank" class="btn btn-outline-primary btn-sm map-btn">導航</a></div>
+            <div class="item"><b>下午：MARK IS / 福岡巨蛋</b><br><a href="https://www.google.com/maps/search/MARK+IS+Fukuoka+Momochi" target="_blank" class="btn btn-outline-primary btn-sm map-btn">導航</a></div>
+            <div class="item"><b>晚餐：肉いち 藥院店</b><br><a href="https://www.google.com/maps/search/Nikuichi+Yakuin" target="_blank" class="btn btn-outline-primary btn-sm map-btn">導航</a><div class="tips">⚠️ 藥院區停車貴，建議找 Times。</div></div>
+        </div>
+    </div>
+
+    <div class="card day-card stage-2">
+        <div class="card-header bg-light">Day 3: 4/24 (五) 轉場東區 <input type="checkbox" class="form-check-input chk"></div>
+        <div class="card-body">
+            <div class="item"><b>午餐：めんたい重 / 魚忠</b><br><a href="https://www.google.com/maps/search/Ganso+Hakata+Mentaiju" target="_blank" class="btn btn-outline-warning btn-sm map-btn">導航</a></div>
+            <div class="item"><b>下午：入住 The Luigans</b><br><small>經都市高速往海之中道</small><br><a href="https://www.google.com/maps/search/The+Luigans+Spa+Resort" target="_blank" class="btn btn-outline-warning btn-sm map-btn">導航</a></div>
+        </div>
+    </div>
+
+    <div class="card day-card stage-2">
+        <div class="card-header bg-light">Day 4: 4/25 (六) 志賀島自駕 <input type="checkbox" class="form-check-input chk"></div>
+        <div class="card-body">
+            <div class="item"><b>全日：海之中道 / 志賀島</b><br><small>推薦環島開車，風景極佳</small><br><a href="https://www.google.com/maps/search/Shikanoshima+Island" target="_blank" class="btn btn-outline-warning btn-sm map-btn">導航</a></div>
+        </div>
+    </div>
+
+    <div class="card day-card stage-3">
+        <div class="card-header bg-light">Day 5: 4/26 (日) 中洲文化 <input type="checkbox" class="form-check-input chk"></div>
+        <div class="card-body">
+            <div class="item"><b>下午：驚安殿堂 (中洲店)</b><br><a href="https://www.google.com/maps/search/Don+Quijote+Nakasu" target="_blank" class="btn btn-outline-success btn-sm map-btn">導航</a></div>
+            <div class="item"><b>入住：Garden Terrace</b><br><a href="https://www.google.com/maps/search/Garden+Terrace+Fukuoka" target="_blank" class="btn btn-outline-success btn-sm map-btn">導航</a></div>
+        </div>
+    </div>
+
+    <div class="card day-card stage-3">
+        <div class="card-header bg-light">Day 6: 4/27 (一) 剪髮咖啡 <input type="checkbox" class="form-check-input chk"></div>
+        <div class="card-body">
+            <div class="item"><b>午餐：わかば 炸豬排</b><br><a href="https://www.google.com/maps/search/Tonkatsu+Wakaba+Fukuoka" target="_blank" class="btn btn-outline-success btn-sm map-btn">導航</a></div>
+            <div class="item"><b>下午：AUBE HAIR / Coffee County</b><br><a href="https://www.google.com/maps/search/Coffee+County+Fukuoka" target="_blank" class="btn btn-outline-success btn-sm map-btn">導航</a></div>
+            <div class="item"><b>晚餐：肉の山勝</b></div>
+        </div>
+    </div>
+
+    <div class="card day-card stage-3">
+        <div class="card-header bg-light">Day 7: 4/28 (二) 最後放鬆 <input type="checkbox" class="form-check-input chk"></div>
+        <div class="card-body">
+            <div class="item"><b>下午：Round1 Stadium</b><br><a href="https://www.google.com/maps/search/Round1+Stadium+Fukuoka" target="_blank" class="btn btn-outline-success btn-sm map-btn">導航</a></div>
+            <div class="item"><b>晚餐：鮨 貫 / 創作和食 とき</b><div class="tips" style="color:red;">🍷 若飲酒請務必叫代駕 (Daiko)。</div></div>
+        </div>
     </div>
 
     <div class="card day-card">
-        <div class="card-header day-header stage-1">
-            4/22 (三) | 入住海濱酒店
-            <input type="checkbox" class="form-check-input done-check">
-        </div>
+        <div class="card-header bg-dark text-white">Day 8: 4/29 (三) 啟程 <input type="checkbox" class="form-check-input chk"></div>
         <div class="card-body">
-            <div class="time-slot">
-                <span class="time-label">下午：入住 Hotel Marinoa Resort</span>
-                <p class="small text-muted">直接開車前往 Check-in，有專屬停車場。</p>
-                <a
+            <div class="item"><b>12:00 退房往機場還車</b><br><a href="https://www.google.com/maps/search/Fukuoka+Airport" target="_blank" class="btn btn-dark btn-sm map-btn">機場導航</a></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.chk').forEach(c => {
+        c.onchange = function() {
+            this.closest('.day-card').classList.toggle('done', this.checked);
+        }
+    });
+</script>
+</body>
+</html>
