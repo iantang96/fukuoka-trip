@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helen's Fukuoka Self-Drive Trip 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .hotel-card { border-left: 5px solid #007bff; margin-bottom: 20px; }
+        .day-section { margin-top: 30px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .done-task { text-decoration: line-through; color: #6c757d; }
+        .sticky-header { position: sticky; top: 0; z-index: 1000; background: white; padding: 10px 0; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+<div class="container py-4">
+    <header class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">福岡自駕美食之旅 🚗💨</h1>
+        <p class="lead">4/22 - 4/29 | 3 間精選酒店時序</p>
+    </header>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card hotel-card p-3">
+                <h5>Step 1: Hotel Marinoa</h5>
+                <p class="small mb-0">4/22 - 4/24 (2晚)<br>西區 Outlet 旁</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card hotel-card p-3" style="border-left-color: #fd7e14;">
+                <h5>Step 2: The Luigans</h5>
+                <p class="small mb-0">4/24 - 4/26 (2晚)<br>海之中道渡假</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card hotel-card p-3" style="border-left-color: #20c997;">
+                <h5>Step 3: Garden Terrace</h5>
+                <p class="small mb-0">4/26 - 4/29 (3晚)<br>西區精緻酒店</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive day-section bg-white p-3">
+        <table class="table table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>日期</th>
+                    <th>住宿地點</th>
+                    <th>行程內容</th>
+                    <th>重點餐廳/景點</th>
+                    <th>完成狀態</th>
+                </tr>
+            </thead>
+            <tbody id="itinerary-body">
+                <tr>
+                    <td>4/22 (三)</td>
+                    <td><span class="badge bg-primary">Marinoa</span></td>
+                    <td>抵達、Check-in、逛 Outlet</td>
+                    <td>Tenpura Nasubi</td>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                </tr>
+                <tr>
+                    <td>4/23 (四)</td>
+                    <td><span class="badge bg-primary">Marinoa</span></td>
+                    <td>友泉亭、MARK IS 購物</td>
+                    <td>Gaogao Ōhori / Nikuichi</td>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                </tr>
+                <tr>
+                    <td>4/24 (五)</td>
+                    <td><span class="badge bg-warning text-dark">Luigans</span></td>
+                    <td>自駕跨區、中洲午餐</td>
+                    <td>元祖博多めんたい重</td>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                </tr>
+                <tr>
+                    <td>4/25 (六)</td>
+                    <td><span class="badge bg-warning text-dark">Luigans</span></td>
+                    <td>海之中道公園、志賀島環島</td>
+                    <td>水炊き 新三浦 / 志賀島海鮮</td>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                </tr>
+                <tr>
+                    <td>4/26 (日)</td>
+                    <td><span class="badge bg-success">Garden Terrace</span></td>
+                    <td>警固神社、驚安殿堂</td>
+                    <td>Sukiyaki Yamasho</td>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                </tr>
+                <tr>
+                    <td>4/27 (一)</td>
+                    <td><span class="badge bg-success">Garden Terrace</span></td>
+                    <td>AUBE HAIR 造型、Coffee County</td>
+                    <td>わかば (炸豬排) / 肉の山勝</td>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                </tr>
+                <tr>
+                    <td>4/28 (二)</td>
+                    <td><span class="badge bg-success">Garden Terrace</span></td>
+                    <td>Round1 遊戲、自由購物</td>
+                    <td>魚忠 / 創作和食 とき</td>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                </tr>
+                <tr>
+                    <td>4/29 (三)</td>
+                    <td>(退房)</td>
+                    <td>最後購物、機場還車</td>
+                    <td>酒店早餐 / 免稅店</td>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="text-center mt-5 text-muted">
+        <p>Tip: 點擊 Checkbox 標記已完成行程。祝 Helen 旅途愉快！</p>
+    </footer>
+</div>
+
+<script>
+    // 簡單的互動功能：點擊 Checkbox 劃掉文字
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            let row = this.closest('tr');
+            if (this.checked) {
+                row.classList.add('done-task');
+            } else {
+                row.classList.remove('done-task');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
